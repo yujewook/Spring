@@ -38,5 +38,9 @@ public class YoilTeller {
 		PrintWriter out = response.getWriter(); //response객체에서 브라우저로 출력 스트림을 얻는다.
 		out.println(year+"년"+month+"월"+day+"일");
 		out.println(yoil+"요일입니다.");
+		
+	 
+		
+		
 	}
 }
