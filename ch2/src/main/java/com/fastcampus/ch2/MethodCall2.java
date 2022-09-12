@@ -12,17 +12,20 @@ import org.springframework.validation.support.BindingAwareModelMap;
 
 public class MethodCall2 {
 	public static void main(String[] args) throws Exception{
-
+		//1. YoilTeller2MVC 객체를 생성
 		Class clazz = Class.forName("com.fastcampus.ch2.YoilTeller2MVC");
 		Object obj = clazz.newInstance();
 		
+		//2. main 메서드에서 정보를 갖고온다
 		Method main = clazz.getDeclaredMethod("main", int.class, int.class, int.class, Model.class);
 		
+		//3. 모델은 인터페이스로 객체를 생성할수 없다 하지만 BindingAwareModelMap();을 통해 객체생성
 		Model model = new BindingAwareModelMap();
 		System.out.println("[before] model="+model);
 		
+		//4.main 메서드 호출
 		// String viewName = obj.main(2021, 10, 1, model);
-		String viewName = (String)main.invoke(obj, new Object[] { 2021, 10, 1, model }); 	
+		String viewName = (String)main.invoke(obj, new Object[] { 2021, 10, 1, model }); //Reflaction API를 이용한 호출	
 		System.out.println("viewName="+viewName);	
 		
 		// Model의 내용을 출력 
