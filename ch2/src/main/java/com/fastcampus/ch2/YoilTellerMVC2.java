@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class YoilTellerMVC {
+public class YoilTellerMVC2 {
 	@ExceptionHandler(Exception.class)
 	public String catcher(Exception ex) {
 		ex.printStackTrace();
@@ -17,7 +17,7 @@ public class YoilTellerMVC {
 	}
 	
 	
-    @RequestMapping("/getYoilMVC") // http://localhost/ch2/getYoilMVC
+    @RequestMapping("/getYoilMVC2") // http://localhost/ch2/getYoilMVC
     public String main(int year, int month, int day, Model model) {
  
         // 1. 유효성 검사

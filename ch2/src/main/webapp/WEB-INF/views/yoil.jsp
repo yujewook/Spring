@@ -8,7 +8,7 @@
 <body>
 
 <!-- 모델 객체가 들어가는 곳 el  -->
-<P> ${year }년 ${month}월 ${day}일 ${yoil}입니다. </P>
+<P> ${mydate.year }년 ${mydate.month}월 ${mydate.day}일 ${yoil}입니다. </P>
 
 
 </body>
