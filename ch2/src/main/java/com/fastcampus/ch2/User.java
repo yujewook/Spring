@@ -1,5 +1,7 @@
 package com.fastcampus.ch2;
 
+import java.util.Date;
+
 public class User {
 	private String name;
 	
@@ -8,7 +10,7 @@ public class User {
 	private String id;
 	private String pwd;
 	private String email;
-	private String birth;
+	private Date birth;
 	private String sns;
 
 	@Override
@@ -43,10 +45,10 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getBirth() {
+	public Date getBirth() {
 		return birth;
 	}
-	public void setBirth(String birth) {
+	public void setBirth(Date birth) {
 		this.birth = birth;
 	}
 	public String getSns() {
